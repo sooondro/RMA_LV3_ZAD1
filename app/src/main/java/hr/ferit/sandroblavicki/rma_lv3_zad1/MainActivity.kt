@@ -22,6 +22,13 @@ class MainActivity : AppCompatActivity() {
         binding.bGreenBird.setOnClickListener { countBird(ContextCompat.getColor(applicationContext, R.color.green)) }
         binding.bYellowBird.setOnClickListener { countBird(ContextCompat.getColor(applicationContext, R.color.yellow)) }
         binding.bRedBird.setOnClickListener { countBird(ContextCompat.getColor(applicationContext, R.color.red)) }
+        binding.bReset.setOnClickListener { resetValues() }
+    }
+
+    private fun resetValues() {
+        val preferenceManager = PreferenceManager()
+        preferenceManager.resetValues()
+        displayBirdCounter()
     }
 
     override fun onResume() {
