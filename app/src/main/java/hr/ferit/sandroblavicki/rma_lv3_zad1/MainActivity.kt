@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpUi() {
-        binding.bBlueBird.setOnClickListener { countBird(ContextCompat.getColor(applicationContext, R.color.blue)) }
-        binding.bGreenBird.setOnClickListener { countBird(ContextCompat.getColor(applicationContext, R.color.green)) }
-        binding.bYellowBird.setOnClickListener { countBird(ContextCompat.getColor(applicationContext, R.color.yellow)) }
-        binding.bRedBird.setOnClickListener { countBird(ContextCompat.getColor(applicationContext, R.color.red)) }
+        binding.bBlueBird.setOnClickListener { countBird(ContextCompat.getColor(BirdCounterApp.ApplicationContext, R.color.blue)) }
+        binding.bGreenBird.setOnClickListener { countBird(ContextCompat.getColor(BirdCounterApp.ApplicationContext, R.color.green)) }
+        binding.bYellowBird.setOnClickListener { countBird(ContextCompat.getColor(BirdCounterApp.ApplicationContext, R.color.yellow)) }
+        binding.bRedBird.setOnClickListener { countBird(ContextCompat.getColor(BirdCounterApp.ApplicationContext, R.color.red)) }
         binding.bReset.setOnClickListener { resetValues() }
     }
 
